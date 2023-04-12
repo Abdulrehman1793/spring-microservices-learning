@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Added eureka server module">
+    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Implemented service discovery with eureka">
+      <change afterPath="$PROJECT_DIR$/clients/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/fraud/FraudClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/FraudCheckResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/fraud/FraudCheckResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudCheckResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +75,9 @@
       <recent name="F:\spring-boot\microservices\fraud\src\main\resources" />
       <recent name="F:\spring-boot\microservices\customer\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.abdulrehman1793.clients.fraud" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.CustomerApplication">
     <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -127,9 +133,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CustomerApplication" />
-        <item itemvalue="Spring Boot.FraudApplication" />
         <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Spring Boot.FraudApplication" />
+        <item itemvalue="Spring Boot.CustomerApplication" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -142,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681276744795</updated>
-      <workItem from="1681276746455" duration="6597000" />
+      <workItem from="1681276746455" duration="7448000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <created>1681277052000</created>
@@ -186,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681282730086</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented service discovery with eureka">
+      <created>1681284326098</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681284326098</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +223,7 @@
     <MESSAGE value="Simple working fraud module" />
     <MESSAGE value="Implemented fraud check from customer module" />
     <MESSAGE value="Added eureka server module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added eureka server module" />
+    <MESSAGE value="Implemented service discovery with eureka" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented service discovery with eureka" />
   </component>
 </project>
