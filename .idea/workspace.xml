@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Added new module for rabbit mq">
-      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/abdulrehman1793/amqp/RabbitMQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amqp/src/main/java/com/abdulrehman1793/amqp/RabbitMQMessageProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Implemented rabbit mq">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amqp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +73,7 @@
       <recent name="com.abdulrehman1793.clients.fraud" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CustomerApplication">
+  <component name="RunManager" selected="Spring Boot.FraudApplication">
     <configuration name="ApiGWApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="apigw" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.abdulrehman1793.apigw.ApiGWApplication" />
@@ -120,6 +113,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FraudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="fraud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.abdulrehman1793.fraud.FraudApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.abdulrehman1793.fraud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="notification" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.abdulrehman1793.notification.NotificationApplication" />
@@ -139,21 +145,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NotificationApplication" />
         <item itemvalue="Spring Boot.CustomerApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Spring Boot.NotificationApplication" />
         <item itemvalue="Spring Boot.ApiGWApplication" />
+        <item itemvalue="Spring Boot.FraudApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +165,7 @@
       <updated>1681276744795</updated>
       <workItem from="1681276746455" duration="7591000" />
       <workItem from="1681359091494" duration="7121000" />
-      <workItem from="1681452417016" duration="2413000" />
+      <workItem from="1681452417016" duration="2680000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <created>1681277052000</created>
@@ -253,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681453297981</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented rabbit mq">
+      <created>1681454874273</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681454874273</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +288,7 @@
     <MESSAGE value="Added distributed tracing sleuth and zipkin" />
     <MESSAGE value="Added api gateway load balance" />
     <MESSAGE value="Added new module for rabbit mq" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new module for rabbit mq" />
+    <MESSAGE value="Implemented rabbit mq" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented rabbit mq" />
   </component>
 </project>

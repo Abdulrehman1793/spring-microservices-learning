@@ -6,7 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
+@SpringBootApplication(
+        scanBasePackages = {
+                "com.abdulrehman1793.customer",
+                "com.abdulrehman1793.amqp",
+        }
+)
 @EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.abdulrehman1793.clients")
 public class CustomerApplication {
