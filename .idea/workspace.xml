@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Packaging Microservices to Runnable Jar">
-      <change afterPath="$PROJECT_DIR$/apigw/src/main/resources/application-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification/src/main/resources/application-docker.yml" afterDir="false" />
+    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Packaging Jars to docker image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apigw/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apigw/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fraud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,15 +112,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="notification" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.abdulrehman1793.notification.NotificationApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.abdulrehman1793.notification.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -151,12 +133,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.eureka-server: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.notification: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="eureka-server" />
+              <option value="notification" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -164,12 +146,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.notification: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.pgadmin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="notification" />
+              <option value="pgadmin" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -190,13 +172,26 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.zipkin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zipkin" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.notification: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.eureka-server: Compose Deployment" />
-        <item itemvalue="Spring Boot.NotificationApplication" />
+        <item itemvalue="Docker.docker-compose.yml.pgadmin: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +214,12 @@
       <workItem from="1681558475013" duration="38000" />
       <workItem from="1681558532382" duration="2825000" />
       <workItem from="1681561652533" duration="197000" />
-      <workItem from="1681561883216" duration="309000" />
+      <workItem from="1681561883216" duration="456000" />
+      <workItem from="1681640272684" duration="662000" />
+      <workItem from="1681640951297" duration="213000" />
+      <workItem from="1681641181209" duration="1140000" />
+      <workItem from="1681653362302" duration="1326000" />
+      <workItem from="1681654722957" duration="341000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <created>1681277052000</created>
@@ -333,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681469071270</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Packaging Jars to docker image">
+      <created>1681562322552</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681562322552</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +374,7 @@
     <MESSAGE value="replaced sendNotification to rabbitmq publish" />
     <MESSAGE value="Added rabbitmq listener" />
     <MESSAGE value="Packaging Microservices to Runnable Jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packaging Microservices to Runnable Jar" />
+    <MESSAGE value="Packaging Jars to docker image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Packaging Jars to docker image" />
   </component>
 </project>
