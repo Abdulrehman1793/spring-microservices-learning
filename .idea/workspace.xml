@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Packaging Jars to docker image">
+    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="fix:Packaging Jars to docker image">
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/configmap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/rbac.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/services.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/statefulset.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/statefulset.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="minikube" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="enabledProfiles">
@@ -52,15 +63,16 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_directory_selection&quot;: &quot;F:/spring-boot/microservices/clients/src/main/java/com/abdulrehman1793/clients&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/spring-boot/microservices/customer/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/spring-boot/microservices/k8s/minikube/bootstrap&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;12ca7d8f313164a1a5ede046457a0399&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -73,11 +85,11 @@
       <recent name="com.abdulrehman1793.fraud" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\spring-boot\microservices\k8s\minikube\bootstrap" />
       <recent name="F:\spring-boot\microservices\customer\src\main\resources" />
       <recent name="F:\spring-boot\microservices\apigw\src\main\resources" />
       <recent name="F:\spring-boot\microservices\notification\src\main\resources" />
       <recent name="F:\spring-boot\microservices\eureka-server\src\main\resources" />
-      <recent name="F:\spring-boot\microservices\fraud\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.abdulrehman1793.clients.fraud" />
@@ -220,6 +232,17 @@
       <workItem from="1681641181209" duration="1140000" />
       <workItem from="1681653362302" duration="1326000" />
       <workItem from="1681654722957" duration="341000" />
+      <workItem from="1681655081192" duration="18000" />
+      <workItem from="1681655114029" duration="46000" />
+      <workItem from="1681655231901" duration="206000" />
+      <workItem from="1682574447019" duration="1516000" />
+      <workItem from="1682575996689" duration="18000" />
+      <workItem from="1682576037395" duration="1531000" />
+      <workItem from="1682578278773" duration="329000" />
+      <workItem from="1682578799973" duration="247000" />
+      <workItem from="1682777879236" duration="398000" />
+      <workItem from="1682778295882" duration="2241000" />
+      <workItem from="1682784845956" duration="1961000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <created>1681277052000</created>
@@ -340,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681562322552</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix:Packaging Jars to docker image">
+      <created>1681655093251</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681655093251</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +405,7 @@
     <MESSAGE value="Added rabbitmq listener" />
     <MESSAGE value="Packaging Microservices to Runnable Jar" />
     <MESSAGE value="Packaging Jars to docker image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Packaging Jars to docker image" />
+    <MESSAGE value="fix:Packaging Jars to docker image" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:Packaging Jars to docker image" />
   </component>
 </project>
