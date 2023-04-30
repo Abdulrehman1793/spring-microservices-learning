@@ -4,15 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="fix:Packaging Jars to docker image">
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/configmap.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/rbac.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/services.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/rabbitmq/statefulset.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/minikube/bootstrap/zipkin/statefulset.yml" afterDir="false" />
+    <list default="true" id="d2e84d47-e117-4409-89e8-773bef6facec" name="Changes" comment="Added k8s for rabbitmq and zipkin and postgres">
+      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-default.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-docker.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clients/src/main/resources/clients-kube.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customer/src/main/resources/application-kube.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-kube.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/customer/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/customer/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/fraud/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/fraud/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/notification/deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/minikube/services/notification/service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification/src/main/resources/application-kube.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/fraud/FraudClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/fraud/FraudClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/notification/NotificationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/clients/src/main/java/com/abdulrehman1793/clients/notification/NotificationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/abdulrehman1793/customer/CustomerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/java/com/abdulrehman1793/fraud/FraudApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application-docker.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/fraud/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/java/com/abdulrehman1793/notification/NotificationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +82,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_directory_selection&quot;: &quot;F:/spring-boot/microservices/clients/src/main/java/com/abdulrehman1793/clients&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/spring-boot/microservices/k8s/minikube/bootstrap&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/spring-boot/microservices/k8s/minikube&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,17 +101,17 @@
       <recent name="com.abdulrehman1793.fraud" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\spring-boot\microservices\k8s\minikube\bootstrap" />
-      <recent name="F:\spring-boot\microservices\customer\src\main\resources" />
-      <recent name="F:\spring-boot\microservices\apigw\src\main\resources" />
+      <recent name="F:\spring-boot\microservices\k8s\minikube" />
       <recent name="F:\spring-boot\microservices\notification\src\main\resources" />
-      <recent name="F:\spring-boot\microservices\eureka-server\src\main\resources" />
+      <recent name="F:\spring-boot\microservices\fraud\src\main\resources" />
+      <recent name="F:\spring-boot\microservices\customer\src\main\resources" />
+      <recent name="F:\spring-boot\microservices\clients\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.abdulrehman1793.clients.fraud" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.customer: Compose Deployment">
     <configuration name="ApiGWApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="apigw" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.abdulrehman1793.apigw.ApiGWApplication" />
@@ -145,6 +161,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.customer: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="customer" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.notification: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -184,26 +213,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.zipkin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="zipkin" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.customer: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.notification: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.pgadmin: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +258,8 @@
       <workItem from="1682578799973" duration="247000" />
       <workItem from="1682777879236" duration="398000" />
       <workItem from="1682778295882" duration="2241000" />
-      <workItem from="1682784845956" duration="1961000" />
+      <workItem from="1682784845956" duration="3837000" />
+      <workItem from="1682854453013" duration="1616000" />
     </task>
     <task id="LOCAL-00001" summary="initial project">
       <created>1681277052000</created>
@@ -370,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681655093251</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added k8s for rabbitmq and zipkin and postgres">
+      <created>1682789833294</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682789833294</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +430,7 @@
     <MESSAGE value="Packaging Microservices to Runnable Jar" />
     <MESSAGE value="Packaging Jars to docker image" />
     <MESSAGE value="fix:Packaging Jars to docker image" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:Packaging Jars to docker image" />
+    <MESSAGE value="Added k8s for rabbitmq and zipkin and postgres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added k8s for rabbitmq and zipkin and postgres" />
   </component>
 </project>
